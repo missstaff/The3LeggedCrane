@@ -1,0 +1,23 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 15rem;
+    transition: all 0.4s;
+    background-size: contain;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.1);
+  }
