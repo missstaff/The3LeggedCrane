@@ -8,7 +8,7 @@ const Navigation = () => {
 
         <header className="header">
 
-            <h1 style={{fontSize: 50}}>The 3 Legged Crane</h1>
+            <h1 style={{ fontSize: 50 }}>The 3 Legged Crane</h1>
 
             <nav className="main-nav">
                 <ul className="main-nav-list">
@@ -29,7 +29,7 @@ const Navigation = () => {
                     </li>
                 </ul>
             </nav>
-      
+
             <button className="btn-mobile-nav">
                 <ion-icon className="icon-mobile-nav" name="menu-outline"></ion-icon>
                 <ion-icon className="icon-mobile-nav" name="close-outline"></ion-icon>
