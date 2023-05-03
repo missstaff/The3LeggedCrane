@@ -7,6 +7,7 @@ import Navigation from "./Components/Layout/Navigation";
 
 import "./CSS/About.css";
 import Footer from "./Components/Layout/Footer";
+import Brews from "./Components/Brews";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         </div>
         <Gallery />
       </div>
+      <Brews />
       <Footer />
     </div>
   );

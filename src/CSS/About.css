@@ -11,6 +11,7 @@
       grid-template-columns: 55fr 45fr;
       padding-top: 9.6rem;
       align-items: center;
+      margin-bottom: 9.6rem;
   }
 .about-background-image {
     background-image: url("../assets/3LeggedCrane_LOGO_LightGrayShield_lightGreen.png");

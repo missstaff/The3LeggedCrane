@@ -11,7 +11,6 @@ const Gallery = () => {
   const [galleryItems, setGalleryImages] = useState([]);
 
   useEffect(() => {
-
     const items = [];
     for (let i = 0; i < DATA.length; i++) {
       const filteredItems = DATA[i].filter((item) => item.type !== "food");
@@ -19,8 +18,6 @@ const Gallery = () => {
     }
     setGalleryImages(shuffle(items));
   }, []);
-
- 
 
 
   const galleryImage = galleryItems.slice(0, 16).map((item, index) => {
@@ -30,6 +27,7 @@ const Gallery = () => {
       </figure>
     );
   });
+
 
   return (
     <div>
