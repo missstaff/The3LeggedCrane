@@ -1,14 +1,31 @@
 import React from "react";
 import "../../CSS/General.css";
 import "../../CSS/Navigation.css";
+import { siteTitle } from "../../Config/constants";
 
 
 const Navigation = () => {
+
+    const sectionHeroEl = document.querySelector(".slide-container");
+    const observer = new IntersectionObserver(function (entries) {
+        const ent = entries[0];
+        if (!ent.isIntersecting) {
+            document.body.classList.add("sticky");
+        }
+        if (ent.isIntersecting) {
+            document.body.classList.remove("sticky");
+        }
+    }, {
+        //in the viewport
+        root: null,
+        threshold: 0,
+    })
+    observer.observe(sectionHeroEl)
     return (
 
         <header className="header">
 
-            <h1 style={{ fontSize: 50 }}>The 3 Legged Crane</h1>
+            <h1 style={{ fontSize: 50 }}>{siteTitle}</h1>
 
             <nav className="main-nav">
                 <ul className="main-nav-list">

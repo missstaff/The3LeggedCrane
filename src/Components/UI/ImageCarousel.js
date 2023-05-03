@@ -34,7 +34,7 @@ const ImageCarousel = () => {
             }
             setSlideImages(shuffle(items));
         }
-        console.log(slideImages)
+   
     }, [slideImages.length]);
     return (
         <div style={{marginTop: 96, marginBottom: 96, }} className="slide-container">

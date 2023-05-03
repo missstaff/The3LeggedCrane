@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
+import { faceBookHandle, instagramHandle, twitterHandle } from "../../Config/constants";
 
 
 const Footer = () => {
@@ -31,9 +32,9 @@ const Footer = () => {
       <div>
         <h3 style={{ fontSize: 18, marginBottom: 10, paddingLeft: 55 }}>Social Media</h3>
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start" }} >
-          <a href="https://www.facebook.com/3leggedcrane/" style={{ padding: 10 }}><FaFacebookSquare size={50} color="white" /></a>
-          <a href="https://www.instagram.com/3leggedcrane/" style={{ padding: 10 }}><FaInstagramSquare size={50} color="white"  /></a>
-          <a href="#" style={{ padding: 10 }}><FaTwitterSquare size={50} color="white"  /></a>
+          <a href={faceBookHandle} style={{ padding: 10 }}><FaFacebookSquare size={50} color="white" /></a>
+          <a href={instagramHandle} style={{ padding: 10 }}><FaInstagramSquare size={50} color="white"  /></a>
+          <a href={twitterHandle} style={{ padding: 10 }}><FaTwitterSquare size={50} color="white"  /></a>
         </div>
       </div>
       <div>
