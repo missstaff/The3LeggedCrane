@@ -84,9 +84,9 @@ const Vittles = () => {
                 <div style={{ marginLeft: 50, marginRight: 50 }}>
                     <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: "#cf711f" }}>NIBBLES</h4>
                     {displayNibbles}
-                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: " color: #cf711f;" }}>KIDS BASKETS</h4>
+                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: " color: #cf711f" }}>KIDS BASKETS</h4>
                     {displayKidsBaskets}
-                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: " color: #cf711f;" }}>DESSERTS AND SPECIALS</h4>
+                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: " color: #cf711f" }}>DESSERTS AND SPECIALS</h4>
                     {displayDessertsSpecials}
                 </div>
             </div>
