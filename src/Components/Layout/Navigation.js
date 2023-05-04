@@ -27,12 +27,12 @@ const Navigation = () => {
 
         <header className="header">
 
-            <h1 style={{ fontSize: 50 }}>{siteTitle}</h1>
+            <h1 style={{ fontSize: 50, color: "#cf711f" }}>{siteTitle}</h1>
 
             <nav className="main-nav">
                 <ul className="main-nav-list">
                     <li>
-                        <a href="#home" className="main-nav-link">HOME</a>
+                        <a href="#" className="main-nav-link">HOME</a>
                     </li>
                     <li>
                         <a href="#about" className="main-nav-link">ABOUT</a>

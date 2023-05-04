@@ -9,6 +9,7 @@ import Navigation from "./Components/Layout/Navigation";
 import Footer from "./Components/Layout/Footer";
 import Brews from "./Components/Brews";
 import Vittles from "./Components/Vittles";
+import Events from "./Components/Events";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       </div>
       <Brews />
       <Vittles />
+      <Events />
       <div>
       </div>
       <Footer />
