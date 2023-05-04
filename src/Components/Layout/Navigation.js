@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../CSS/General.css";
 import "../../CSS/Navigation.css";
 import { siteTitle } from "../../Config/constants";
@@ -6,6 +6,7 @@ import { siteTitle } from "../../Config/constants";
 
 const Navigation = () => {
 
+   useEffect(() => {
     const sectionHeroEl = document.querySelector(".slide-container");
     const observer = new IntersectionObserver(function (entries) {
         const ent = entries[0];
@@ -21,6 +22,7 @@ const Navigation = () => {
         threshold: 0,
     })
     observer.observe(sectionHeroEl)
+   }, [])
     return (
 
         <header className="header">
