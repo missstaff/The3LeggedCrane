@@ -33,7 +33,9 @@ function App() {
         </div>
         <Gallery />
       </div>
-      <Brews />
+     <div style={{marginBottom: 96}}>
+     <Brews />
+     </div>
       <Footer />
     </div>
   );

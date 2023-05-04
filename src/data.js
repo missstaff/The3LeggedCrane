@@ -2,7 +2,8 @@ export const DATA = [
     [
         {
             id: 1,
-            description: "This beer is the rich color of honey with aromas of spectacularly malted barley and traditional herbal/floral hops. It also has a wee touch'o peeted malt which gives it a distinctive flavor that is rarely found in typical beers. If it's not Scottish its crap! (insert thick Scottish accent)",
+            abv: "4.6%",
+            description: "This rich honey-colored beer boasts aromas of impeccably malted barley and traditional herbal/floral hops. It also features a touch of peated malt, giving it a unique flavor that is seldom found in other beers. As they say, 'If it's not Scottish, it's crap!' (imagine a thick Scottish accent)",
             name: "Angus in Argyle",
             img: require("./assets/beverages/angusInArgyle.jpg"),
             style: "Scottish Peeted Golden Ale",
@@ -11,7 +12,7 @@ export const DATA = [
         {
             id: 2,
             abv: "5.5%",
-            description: "The original classic India Pale Ale. Unlike its U.S. cousin this side of the pond, this traditional IPA is in complete balance between malt sweetness and hop bitterness. The flavor is reminiscent of eating a dense, moist fruit cake then rinsing your pallet clean with a dry and bitter sweet finale. It will leave your pallet beckoning for (as Ted used to say) more'ish. This beer is great on draft and spectacular at cellar temperature and pulled through a beer engine.",
+            description: "The original classic India Pale Ale is the perfect balance of malt sweetness and hop bitterness. With a flavor reminiscent of dense, moist fruit cake followed by a dry and bittersweet finish, it's easy to become enamored with this brew. Enjoy it on draft, or try it at cellar temperature and pulled through a beer engine for an exceptional experience.",
             name: "Higgy Baby English",
             img: require("./assets/beverages/higgyBabyEnglish.jpg"),
             style: "IPA",
@@ -20,7 +21,7 @@ export const DATA = [
         {
             id: 3,
             abv: "7.2%",
-            description: " Osage Orange IPA: Fruit forward IPA made with sweet orange peels and a wee bit o' brown sugar.",
+            description: "Osage Orange IPA is a deliciously fruit-forward brew, boasting the addition of sweet orange peels and a touch of brown sugar for a unique and unforgettable flavor. Whether you're a die-hard IPA fan or simply looking to try something new, Osage Orange IPA is sure to delight your taste buds.",
             name: "Osage Orange",
             img: require("./assets/beverages/osageOrange.png"),
             style: "Orange IPA",
@@ -29,7 +30,7 @@ export const DATA = [
         {
             id: 4,
             abv: "4.4%",
-            description: "Designed by our very own brewhouse minion/apprentice, Eric Shadowen. He wanted to create a Pale Lager that would be at home in the Southern Hemisphere, using only hops from New Zealand. We think he nailed it! We are serving this on cask or the dry hopped version on draught. A very smooth drinkin' malty-pale, leaning towards a fruit and flowery, hoppy presence.",
+            description: "Our brewhouse apprentice, Eric Shadowen, designed this Pale Lager with only New Zealand hops in mind, perfect for those in the Southern Hemisphere. We think he nailed it with a fruity, flowery, hoppy taste that is smooth and malty. Try it on cask or the dry-hopped version on draft for a satisfying sip.",
             name: "Zealander",
             img: require("./assets/beverages/zealander.png"),
             style: "Pale Lager",
