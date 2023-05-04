@@ -180,7 +180,7 @@ export const DATA = [
 export const MENU = [
     {
         id: 1,
-        name: "Homemade chili/soup",
+        name: "Homemade Chili/Soup",
         description: "Check the board for today's selection",
         size: ["cup", "bowl"],
         price: [4, 9],
@@ -188,14 +188,14 @@ export const MENU = [
     },
     {
         id: 2,
-        name: "Pub fries",
+        name: "Pub Fries",
         description: "Hand cut fries, seasoned with our house blend of spices",
         size: ["half order", "full order"],
         price: [5, 10],
         type: "nibbles"
     },
     {   id: 3,                  
-        name: "Sweet Potatoe Fries",
+        name: "Sweet Potato Fries",
         description: "Hand cut sweet potatoe fries, seasoned with our house blend of spices",
         size: ["half order", "full order"],
         price: [7, 12],
@@ -203,7 +203,7 @@ export const MENU = [
     },
     {
         id: 4,
-        name: "Chili cheese fries",
+        name: "Chili Cheese Fries",
         description: "Hand cut fries, topped with our homemade chili and cheddar cheese and onions",
         size: ["full order"],
         price: [13.50],
@@ -251,7 +251,7 @@ export const MENU = [
     },
     {
         id: 10,
-        name: "Kid's Burger",
+        name: "Kids Burger",
         description: "Served on a grilled bun with no fixings",
         size: ["full order"],
         price: [10],
@@ -259,7 +259,7 @@ export const MENU = [
     },
     {
         id: 11,
-        name: "Kid's Taco",
+        name: "Kids Taco",
         description: "Served with Pico de Gallo and lime on a corn tortilla with choice of chicken or cod",
         size: ["full order"],
         price: [9],
@@ -275,7 +275,7 @@ export const MENU = [
     },
     {
         id: 13,
-        name: "Kid's Grilled Cheese",
+        name: "Kids Grilled Cheese",
         description: "Sharp white cheddar on grilled sourdough",
         size: ["full order"],
         price: [8],
