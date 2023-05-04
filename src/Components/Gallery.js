@@ -11,13 +11,15 @@ const Gallery = () => {
   const [galleryItems, setGalleryImages] = useState([]);
 
   useEffect(() => {
-    const items = [];
-    for (let i = 0; i < DATA.length; i++) {
-      const filteredItems = DATA[i].filter((item) => item.type !== "food");
-      items.push(...filteredItems);
+    if (!galleryItems.length) {
+      const items = [];
+      for (let i = 0; i < DATA.length; i++) {
+        const filteredItems = DATA[i].filter((item) => item.type !== "food");
+        items.push(...filteredItems);
+      }
+      setGalleryImages(shuffle(items));
     }
-    setGalleryImages(shuffle(items));
-  }, []);
+  }, [galleryItems.length]);
 
 
   const galleryImage = galleryItems.slice(0, 16).map((item, index) => {

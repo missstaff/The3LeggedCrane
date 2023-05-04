@@ -1,24 +1,37 @@
-.section-about-heading{
+.section-about-heading {
     background-color: #fdf2e9;
     display: grid;
     grid-template-columns: 55fr 45fr;
     padding-top: 9.6rem;
-   
-  }
-  .section-about{
-      background-color: #fdf2e9;
-      display: grid;
-      grid-template-columns: 55fr 45fr;
-      padding-top: 9.6rem;
-      align-items: center;
-      margin-bottom: 9.6rem;
-      padding-bottom: 9.6rem;
-  }
+
+}
+
+.section-about-heading-title-container { 
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.section-about-heading-title-text { 
+    font-size: 5rem; 
+    text-align: center 
+}
+
+.section-about {
+    background-color: #fdf2e9;
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    padding-top: 9.6rem;
+    align-items: center;
+    margin-bottom: 9.6rem;
+    padding-bottom: 9.6rem;
+}
+
 .about-background-image {
     background-image: url("../assets/3LeggedCrane_LOGO_LightGrayShield_lightGreen.png");
     background-repeat: no-repeat, repeat;
-    background-position-x: center ;
+    background-position-x: center;
     background-position-y: top;
     opacity: .90;
-    
 }

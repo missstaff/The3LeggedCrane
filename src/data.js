@@ -38,7 +38,7 @@ export const DATA = [
         },
     ],
     [
-       {
+        {
             id: 1,
             description: "Brewer",
             img: require("./assets/brewery/brewery01.jpg"),
@@ -68,7 +68,7 @@ export const DATA = [
             img: require("./assets/brewery/brewery05.jpg"),
             type: "brewery",
         },
-      {
+        {
             id: 6,
             description: "Taps",
             img: require("./assets/brewery/brewery06.jpg"),
@@ -82,13 +82,13 @@ export const DATA = [
         },
     ],
     [
-       {
+        {
             id: 1,
             description: "Event 01",
             img: require("./assets/events/event01.jpg"),
             type: "event",
         },
-       {
+        {
             id: 2,
             description: "Event 02",
             img: require("./assets/events/event02.png"),
@@ -106,7 +106,7 @@ export const DATA = [
             img: require("./assets/events/event04.jpg"),
             type: "event",
         },
-       {
+        {
             id: 5,
             description: "Event 05",
             img: require("./assets/events/event05.png"),
@@ -120,19 +120,19 @@ export const DATA = [
         },
     ],
     [
-       {
+        {
             id: 1,
             description: "Taco",
             img: require("./assets/food/food01.jpg"),
             type: "food",
         },
-       {
+        {
             id: 2,
             description: "Grilled Sandwich",
             img: require("./assets/food/food02.jpg"),
             type: "food",
         },
-       {
+        {
             id: 3,
             description: "Fish n Chips",
             img: require("./assets/food/food03.jpg"),
@@ -177,3 +177,127 @@ export const DATA = [
     ],
 ];
 
+export const MENU = [
+    {
+        id: 1,
+        name: "Homemade chili/soup",
+        description: "Check the board for today's selection",
+        size: ["cup", "bowl"],
+        price: [4, 9],
+        type: "nibbles"
+    },
+    {
+        id: 2,
+        name: "Pub fries",
+        description: "Hand cut fries, seasoned with our house blend of spices",
+        size: ["half order", "full order"],
+        price: [5, 10],
+        type: "nibbles"
+    },
+    {   id: 3,                  
+        name: "Sweet Potatoe Fries",
+        description: "Hand cut sweet potatoe fries, seasoned with our house blend of spices",
+        size: ["half order", "full order"],
+        price: [7, 12],
+        type: "nibbles"
+    },
+    {
+        id: 4,
+        name: "Chili cheese fries",
+        description: "Hand cut fries, topped with our homemade chili and cheddar cheese and onions",
+        size: ["full order"],
+        price: [13.50],
+        type: "nibbles"
+    },
+    {
+        id: 5,
+        name: "Mushroom Poutine",
+        description: "Pub fries, topped with mushroom gravy and cheese curds",
+        size: ["full order"],
+        price: [13.50],
+        type: "nibbles"
+    },
+    {
+        id: 6,
+        name: "Fried Tempeh Tots",
+        description: "Served with homemade bbq sauce, ranch, or blue cheese dressing",
+        size: ["full order"],
+        price: [11],
+        type: "nibbles"
+    },
+    {
+        id: 7,
+        name: "Warm Spinach Artichoke Dip",
+        description: "Served with fresh seasonal veggies and pita bread",
+        size: ["full order"],
+        price: [13],
+        type: "nibbles"
+    },
+    {
+        id: 8,
+        name: "Bacon Wrapped Dates",
+        description: "4 dates with blue cheese and balsamic vinegar",
+        size: ["full order"],
+        price: [11],
+        type: "nibbles"
+    },
+    {
+        id: 9,
+        name: "Stuffed Jalepenos",
+        description: "3 jalepenos stuffed with cream cheese and wrapped in bacon",
+        size: ["full order"],
+        price: [11],
+        type: "nibbles"
+    },
+    {
+        id: 10,
+        name: "Kid's Burger",
+        description: "Served on a grilled bun with no fixings",
+        size: ["full order"],
+        price: [10],
+        type: "kids"
+    },
+    {
+        id: 11,
+        name: "Kid's Taco",
+        description: "Served with Pico de Gallo and lime on a corn tortilla with choice of chicken or cod",
+        size: ["full order"],
+        price: [9],
+        type: "kids"
+    },
+    {
+        id: 12,
+        name: "Quesadilla",
+        description: "Flour tortilla with cheddar and choice of chicken or cod",
+        size: ["full order"],
+        price: [8],
+        type: "kids"
+    },
+    {
+        id: 13,
+        name: "Kid's Grilled Cheese",
+        description: "Sharp white cheddar on grilled sourdough",
+        size: ["full order"],
+        price: [8],
+        type: "kids"
+    },
+    {
+        id: 14,
+        name: "Single Piece Fish and Chips",
+        description: "1 Alaskan cod fillet served with pub fries",
+        size: ["full order"],
+        price: [9],
+        type: "kids"
+    },
+    {
+        id: 15,
+        name: "Desserts and Specials",
+        description: "Check the board for today's selection",
+        size: ["full order"],
+        price: ["varies"],
+        type: "desserts/specials"
+    }
+
+
+
+];
