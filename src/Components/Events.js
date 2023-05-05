@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "../CSS/Events.css";
-import { DATA } from "../data";
 import SectionHeader from "./Layout/SectionHeader";
+import { getFilterdItems } from "../Utility/Utility";
+import "../CSS/Events.css";
+
+import { DATA } from "../data";
 
 
 const Events = () => {
@@ -11,12 +13,7 @@ const Events = () => {
 
     useEffect(() => {
         if (!events.length) {
-            const items = [];
-            for (let i = 0; i < DATA.length; i++) {
-                const filteredItems = DATA[i].filter((item) => item.type === "event");
-                items.push(...filteredItems);
-            }
-            setEvents(items);
+           getFilterdItems(DATA, setEvents, "event");
         }
     }, [events.length]);
 

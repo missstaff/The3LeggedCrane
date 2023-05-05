@@ -1,6 +1,7 @@
 import React from "react";
 import "../CSS/CardBrew.css"
 
+
 const CardBrew = ({ index, item }) => {
   return (
     <div
@@ -14,19 +15,22 @@ const CardBrew = ({ index, item }) => {
           src={item.img}
           alt={item.name}
           style={{
-            height: "100%", width: "100%", objectFit: "cover", borderTopLeftRadius: 15,
-            borderTopRightRadius: 15
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15, 
+            objectFit: "cover", 
+            height: "100%", 
+            width: "100%", 
           }}
         />
       </div>
       <div
         style={{
+          alignItems: "center",
           display: "flex",
           flexDirection: "row",
-          alignItems: "center",
           justifyContent: "space-between",
-          width: "100%",
           marginBottom: "16px",
+          width: "100%",
         }}
       >
         <div>

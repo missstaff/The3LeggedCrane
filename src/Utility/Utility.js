@@ -6,3 +6,18 @@ export const shuffle = (array) => {
   return array;
 };
 
+export const getMenu = (array, callback, type) => {
+  const items = [];
+  const filteredItems = array.filter((item) => item.type === type);
+  items.push(...filteredItems);
+  callback(items);
+};
+
+export const getFilterdItems = (array, callback, type) => {
+  const items = [];
+  for (let i = 0; i < array.length; i++) {
+    const filteredItems = array[i].filter((item) => item.type === type);
+    items.push(...filteredItems);
+  }
+  callback(items);
+};

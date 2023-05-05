@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { siteTitle } from "../../Config/constants";
 import "../../CSS/Navigation.css";
 
+
 const Navigation = () => {
 
    useEffect(() => {

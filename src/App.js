@@ -1,16 +1,15 @@
 import React from "react";
-import "./CSS/About.css";
-
 import About from "./Components/About";
+import Brews from "./Components/Brews";
+import Events from "./Components/Events";
+import Footer from "./Components/Layout/Footer";
 import Gallery from "./Components/Gallery";
 import ImageCarousel from "./Components/UI/ImageCarousel";
 import Navigation from "./Components/Layout/Navigation";
-
-import Footer from "./Components/Layout/Footer";
-import Brews from "./Components/Brews";
-import Vittles from "./Components/Vittles";
-import Events from "./Components/Events";
 import SectionHeader from "./Components/Layout/SectionHeader";
+import Vittles from "./Components/Vittles";
+import "./CSS/About.css";
+
 
 function App() {
   return (
@@ -38,5 +37,6 @@ function App() {
     </div>
   );
 };
+
 
 export default App;

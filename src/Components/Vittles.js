@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import SectionHeader from "./Layout/SectionHeader";
+import { getMenu } from "../Utility/Utility"
 import "../CSS/Vittles.css"
 
 import { MENU } from "../data";
-import SectionHeader from "./Layout/SectionHeader";
 
 
 const Vittles = () => {
@@ -15,30 +16,21 @@ const Vittles = () => {
     useEffect(() => {
 
         if (!dessertsSpecials.length) {
-            const items = [];
-            const filteredItems = MENU.filter((item) => item.type === "desserts/specials");
-            items.push(...filteredItems);
-            setDessertsSpecials(items);
+          getMenu(MENU, setDessertsSpecials, "desserts");
         }
     }, [dessertsSpecials.length]);
 
 
     useEffect(() => {
         if (!kidsBaskets.length) {
-            const items = [];
-            const filteredItems = MENU.filter((item) => item.type === "kids");
-            items.push(...filteredItems);
-            setKidsBaskets(items);
+           getMenu(MENU, setKidsBaskets, "kids");
         }
     }, [kidsBaskets.length]);
 
 
     useEffect(() => {
         if (!nibbles.length) {
-            const items = [];
-            const filteredItems = MENU.filter((item) => item.type === "nibbles");
-            items.push(...filteredItems);
-            setNibbles(items);
+           getMenu(MENU, setNibbles, "nibbles");
         }
     }, [nibbles.length]);
 

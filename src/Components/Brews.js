@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import CardBrew from "./CardBrew";
-import { shuffle } from "../Utility/Utility";
+import SectionHeader from "./Layout/SectionHeader";
+import { getFilterdItems } from "../Utility/Utility";
 import "../CSS/Brews.css"
 
 import { DATA } from "../data";
-import SectionHeader from "./Layout/SectionHeader";
 
 
 const Brews = () => {
@@ -13,11 +13,7 @@ const Brews = () => {
 
   useEffect(() => {
     const items = [];
-    for (let i = 0; i < DATA.length; i++) {
-      const filteredItems = DATA[i].filter((item) => item.type === "beverage");
-      items.push(...filteredItems);
-    }
-    setBrews(shuffle(items));
+    getFilterdItems(DATA, setBrews, "beverage");
   }, [brews.length]);
 
 
