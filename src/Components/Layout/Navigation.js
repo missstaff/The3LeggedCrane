@@ -1,36 +1,60 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { FaGripLines } from "react-icons/fa";
+import { useClosestMedia } from "../../hooks/useClosestMedia";
+import { useMediaQuery } from "../../hooks/useMediaQuery ";
 import { siteTitle } from "../../Config/constants";
 import "../../CSS/Navigation.css";
 
 
 const Navigation = () => {
 
-   useEffect(() => {
-    const sectionHeroEl = document.querySelector(".slide-container");
-    const observer = new IntersectionObserver(function (entries) {
-        const ent = entries[0];
-        if (!ent.isIntersecting) {
-            document.body.classList.add("sticky");
-        }
-        if (ent.isIntersecting) {
-            document.body.classList.remove("sticky");
-        }
-    }, {
-        //in the viewport
-        root: null,
-        threshold: 0,
-    })
-    observer.observe(sectionHeroEl)
-   }, []);
+    const closestMedia = useClosestMedia({
+        queries: ["xs", "sm", "md", "lg", "xl", "2xl"],
+    });
 
-   
+    const isLargeScreen = useMediaQuery("lg");
+    const isMediumScreen = useMediaQuery("md");
+    const isSmallScreen = useMediaQuery("sm");
+    const isExtraSmallScreen = useMediaQuery("xs");
+
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+    useEffect(() => {
+        const sectionHeroEl = document.querySelector(".slide-container");
+        const observer = new IntersectionObserver(function (entries) {
+            const ent = entries[0];
+            if (!ent.isIntersecting) {
+                document.body.classList.add("sticky");
+            }
+            if (ent.isIntersecting) {
+                document.body.classList.remove("sticky");
+            }
+        }, {
+            //in the viewport
+            root: null,
+            threshold: 0,
+        })
+        observer.observe(sectionHeroEl)
+    }, []);
+
+    useEffect(() => {
+        // Make mobile navigatoion work //
+        const btnNavEl = document.querySelector(".btn-mobile-nav");
+        const headerEl = document.querySelector(".header");
+        btnNavEl.addEventListener("click", function () {
+            headerEl.classList.toggle("nav-open");
+        })
+    }, [isMenuVisible]);
+
+    const handleMobileNavClick = () => {
+        setIsMenuVisible(!isMenuVisible);
+    };
+
+
     return (
-
         <header className="header">
-
             <h1 id="home" className="site-title">{siteTitle}</h1>
-
-            <nav className="main-nav">
+            <nav className={`main-nav ${isMenuVisible ? "mobile-nav-visible" : ""}`}>
                 <ul className="main-nav-list">
                     <li>
                         <a href="#home" className="main-nav-link">HOME</a>
@@ -49,13 +73,10 @@ const Navigation = () => {
                     </li>
                 </ul>
             </nav>
-
-            <button className="btn-mobile-nav">
-                <ion-icon className="icon-mobile-nav" name="menu-outline"></ion-icon>
-                <ion-icon className="icon-mobile-nav" name="close-outline"></ion-icon>
+            <button className="btn-mobile-nav" onClick={handleMobileNavClick}>
+                <a className="icon-mobile-nav" name="menu-outline"><FaGripLines size={isSmallScreen || isExtraSmallScreen ? 25 : 50} color="orange" /></a>
             </button>
         </header>
-
     );
 };
 
