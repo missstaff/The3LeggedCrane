@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
-import { faceBookHandle, instagramHandle, phoneNumber, twitterHandle } from "../../Config/constants";
+import { address, faceBookHandle, instagramHandle, phoneNumber, twitterHandle } from "../../Config/constants";
 import "../../CSS/Footer.css";
 
 
@@ -16,7 +16,7 @@ const Footer = () => {
           className="footer-image"
         />
         <h3 className="footer-heading-tertiery">The 3 Legged Crane</h3>
-        <p className="footer-text">48329 E 1st St., Oakridge, Oregon 97463</p>
+        <p className="footer-text">{address}</p>
       </div>
       <div>
         <h3 className="footer-heading-tertiery" style={{ paddingLeft: 55 }}>Social Media</h3>

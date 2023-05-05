@@ -1,3 +1,21 @@
+.section-about {
+    align-items: center;
+    background-color: #fdf2e9;
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    margin-bottom: 9.6rem;
+    padding-bottom: 9.6rem;
+    padding-top: 9.6rem;
+}
+
+.about-background-image {
+    background-image: url("../assets/3LeggedCrane_LOGO_LightGrayShield_lightGreen.png");
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat, repeat;
+    opacity: .90;
+}
+
 .section-about-heading {
     background-color: #fdf2e9;
     display: grid;
@@ -6,32 +24,26 @@
 
 }
 
-.section-about-heading-title-container { 
+.section-about-heading-title-container {
     align-items: center;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
 }
 
-.section-about-heading-title-text { 
-    font-size: 5rem; 
-    text-align: center 
+.section-about-heading-title-text {
+    font-size: 5rem;
+    text-align: center
 }
 
-.section-about {
-    background-color: #fdf2e9;
-    display: grid;
-    grid-template-columns: 55fr 45fr;
-    padding-top: 9.6rem;
-    align-items: center;
-    margin-bottom: 9.6rem;
-    padding-bottom: 9.6rem;
+.about-text-container {
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
-.about-background-image {
-    background-image: url("../assets/3LeggedCrane_LOGO_LightGrayShield_lightGreen.png");
-    background-repeat: no-repeat, repeat;
-    background-position-x: center;
-    background-position-y: top;
-    opacity: .90;
+.about-text {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+    text-align: left;
 }

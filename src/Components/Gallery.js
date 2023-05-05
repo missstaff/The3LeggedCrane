@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { shuffle } from "../Utility/Utility";
 import "../CSS/Gallery.css";
+
 import { DATA } from "../data";
 
 //TODO: set up database
-
-
 const Gallery = () => {
 
   const [galleryItems, setGalleryImages] = useState([]);
@@ -39,5 +38,6 @@ const Gallery = () => {
     </div>
   );
 };
+
 
 export default Gallery;

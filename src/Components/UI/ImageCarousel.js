@@ -5,6 +5,7 @@ import 'react-slideshow-image/dist/styles.css'
 
 import { DATA } from "../../data"
 
+
 const ImageCarousel = () => {
 
     const [slideImages, setSlideImages] = useState([]);
@@ -53,7 +54,6 @@ const ImageCarousel = () => {
         </div>
     );
 };
-
 
 
 export default ImageCarousel;

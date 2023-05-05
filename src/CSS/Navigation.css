@@ -1,11 +1,6 @@
-.header{
-  display:flex;
+.header {
   align-items: center;
-  justify-content: space-between;
   background-color: #fdf2e9;
-  height: 12.4rem;
-  padding:0 4.8rem;
-  position: relative;
   background-image: url("../assets/logos/logoHeader.png");
   background-repeat: no-repeat, repeat;
   background-position-x: center;
@@ -13,69 +8,74 @@
   background-size: 10rem;
   border-bottom: 0.5px solid #333;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 12.4rem;
+  justify-content: space-between;
+  padding: 0 4.8rem;
+  position: relative;
+
 }
 
-.main-nav-list{
-  list-style-type: none;
-  display: flex;
+.main-nav-list {
   align-items: center;
+  display: flex;
   gap: 4.8rem;
+  list-style-type: none;
 }
 
 .main-nav-link:link,
-.main-nav-link:visited{
-  display: inline-block;
-  text-decoration: none;
+.main-nav-link:visited {
   color: #333;
+  display: inline-block;
   font-weight: 500;
   font-size: 1.8rem;
+  text-decoration: none;
   transition: all 0.3s;
 }
 
 .main-nav-link:hover,
-.main-nav-link:active{
+.main-nav-link:active {
   color: #cf711f;
 }
 
 
 /* MOBILE */
-.btn-mobile-nav{
-  border: none;
+.btn-mobile-nav {
   background: none;
+  border: none;
   cursor: pointer;
-
   display: none;
 }
-.icon-mobile-nav{
+
+.icon-mobile-nav {
+  color: #333;
   height: 4.8rem;
   width: 4.8rem;
-  color: #333;
-
 }
 
-.icon-mobile-nav[name="close-outline"]{
+.icon-mobile-nav[name="close-outline"] {
   display: none;
 }
 
 /* STICKY NAVIGATION */
-.sticky .header{
+.sticky .header {
+  background-color: rgba(255, 255, 255, 0.97);
+  bottom: 0;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  height: 12.4rem;
+  padding-bottom: 0;
+  padding-top: 0;
   position: fixed;
   top: 0;
-  bottom: 0;
   width: 100%;
-  height: 12.4rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.97);
   z-index: 999;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
 
-.sticky .section-hero{
+.sticky .section-hero {
   margin-top: 9.6rem;
 }
 
-.site-title{ 
+.site-title {
+  color: #cf711f;
   font-size: 5rem;
-  color: #cf711f
 }

@@ -1,0 +1,14 @@
+.brews-background-image {
+    height: 10rem;
+    margin-top: -6.5rem;
+    padding: 0;
+    width: "25%";
+}
+
+.brews-card {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

@@ -20,7 +20,9 @@ const Navigation = () => {
         threshold: 0,
     })
     observer.observe(sectionHeroEl)
-   }, [])
+   }, []);
+
+   
     return (
 
         <header className="header">
@@ -55,5 +57,6 @@ const Navigation = () => {
 
     );
 };
+
 
 export default Navigation;
