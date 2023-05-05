@@ -10,7 +10,7 @@ import Footer from "./Components/Layout/Footer";
 import Brews from "./Components/Brews";
 import Vittles from "./Components/Vittles";
 import Events from "./Components/Events";
-
+import SectionHeader from "./Components/Layout/SectionHeader";
 
 function App() {
   return (
@@ -20,14 +20,8 @@ function App() {
         <ImageCarousel />
       </div>
       <div className="section-about-heading">
-        <div className="section-about-heading-title-container">
-          <h2 id="about" className="section-about-heading-title-text">ABOUT</h2>
-          <img src={require("./assets/arrow.png")} style={{ height: 100, width: "25%", marginTop: -65, padding: 0 }} />
-        </div>
-        <div className="section-about-heading-title-container">
-          <h2 id="gallery" className="section-about-heading-title-text">GALLERY</h2>
-          <img src={require("./assets/arrow.png")} style={{ height: 100, width: "25%", marginTop: -65, padding: 0 }} />
-        </div>
+        <SectionHeader id="about" heading="ABOUT" />
+        <SectionHeader id="gallery" heading="GALLERY" />
       </div>
       <div className="section-about">
         <div className="about-background-image">

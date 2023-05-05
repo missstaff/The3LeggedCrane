@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../CSS/Vittles.css"
 
 import { MENU } from "../data";
+import SectionHeader from "./Layout/SectionHeader";
 
 
 const Vittles = () => {
@@ -84,10 +85,8 @@ const Vittles = () => {
 
     return (
         <>
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginTop: 96, marginBottom: 96, }}>
-                <h2 id="vittles" style={{ fontSize: 50, textAlign: "center", }}>VITTLES</h2>
-                <img src={require("../assets/arrow.png")} style={{ height: 100, width: "25%", marginTop: -65, padding: 0 }} />
-            </div>
+            <SectionHeader id="vittles" heading="VITTLES" styles={{ marginBottom: 96, marginTop: 96 }} />
+
             <div className="vittles-container">
 
                 <div style={{ marginLeft: 50, marginRight: 50 }}>

@@ -13,10 +13,22 @@ const CardBrew = ({ index, item }) => {
         <img
           src={item.img}
           alt={item.name}
-          className="card-brew-image"
+          style={{
+            height: "100%", width: "100%", objectFit: "cover", borderTopLeftRadius: 15,
+            borderTopRightRadius: 15
+          }}
         />
       </div>
-      <div className="card-brew-text-container">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+          marginBottom: "16px",
+        }}
+      >
         <div>
           <h4 className="card-brew-title">{item.name}</h4>
         </div>
@@ -28,5 +40,6 @@ const CardBrew = ({ index, item }) => {
     </div>
   );
 };
+
 
 export default CardBrew;

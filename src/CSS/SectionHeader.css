@@ -1,0 +1,11 @@
+.section-heading-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-heading {
+    font-size: 5rem;
+    text-align: center
+}
