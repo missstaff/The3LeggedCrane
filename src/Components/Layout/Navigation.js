@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import "../../CSS/General.css";
-import "../../CSS/Navigation.css";
 import { siteTitle } from "../../Config/constants";
-
+import "../../CSS/Navigation.css";
 
 const Navigation = () => {
 
@@ -27,7 +25,7 @@ const Navigation = () => {
 
         <header className="header">
 
-            <h1 style={{ fontSize: 50, color: "#cf711f" }}>{siteTitle}</h1>
+            <h1 className="site-title">{siteTitle}</h1>
 
             <nav className="main-nav">
                 <ul className="main-nav-list">
