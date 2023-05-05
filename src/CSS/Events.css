@@ -1,0 +1,53 @@
+ .event-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    margin: 0 0 2rem;
+    padding: 2rem;
+    background-color: #fdf2e9;
+    margin-bottom: 10rem;
+}
+
+.section-event {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    padding-top: 19.2rem;
+    padding-bottom: 9.6rem
+}
+.event-description p {
+    margin-left: 5rem;
+    font-size: 2rem;
+    line-height: 1.25;
+}
+/*
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.event-day {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.event-month {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.event-details h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ */

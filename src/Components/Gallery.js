@@ -14,7 +14,7 @@ const Gallery = () => {
     if (!galleryItems.length) {
       const items = [];
       for (let i = 0; i < DATA.length; i++) {
-        const filteredItems = DATA[i].filter((item) => item.type !== "food");
+        const filteredItems = DATA[i].filter((item) => item.type !== "food" && item.img !== null);
         items.push(...filteredItems);
       }
       setGalleryImages(shuffle(items));
@@ -25,8 +25,8 @@ const Gallery = () => {
   const galleryImage = galleryItems.slice(0, 16).map((item, index) => {
     return (
       <figure key={index} className="gallery-item">
-        <img src={item.img} alt={item.description} />
-      </figure>
+      <img src={item.img} alt={item.description} />
+    </figure>
     );
   });
 

@@ -29,7 +29,7 @@ const ImageCarousel = () => {
         if (!slideImages.length) {
             const items = [];
             for (let i = 0; i < DATA.length; i++) {
-                const filteredItems = DATA[i].filter((item) => item.type === "event");
+                const filteredItems = DATA[i].filter((item) => item.type === "event" && item.img !== "");
                 items.push(...filteredItems);
             }
             setSlideImages(shuffle(items));
@@ -38,6 +38,9 @@ const ImageCarousel = () => {
     }, [slideImages.length]);
     return (
         <div style={{marginTop: 96, marginBottom: 96, }} className="slide-container">
+            <div style={{paddingBottom: 96}}>
+            <h2 style={{textAlign: "center", fontSize: 50}}>All Ages Welcome!</h2>
+            </div>
             <Slide>
                 {slideImages.length > 0 && slideImages.map((slideImage, index) => (
                     <div key={index}>

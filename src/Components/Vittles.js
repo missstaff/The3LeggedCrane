@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { shuffle } from "../Utility/Utility"
+
 import { MENU } from "../data";
 
 const Vittles = () => {
@@ -14,7 +14,7 @@ const Vittles = () => {
             const items = [];
             const filteredItems = MENU.filter((item) => item.type === "desserts/specials");
             items.push(...filteredItems);
-            setDessertsSpecials(shuffle(items));
+            setDessertsSpecials(items);
         }
     }, [dessertsSpecials.length]);
 
@@ -23,7 +23,7 @@ const Vittles = () => {
             const items = [];
             const filteredItems = MENU.filter((item) => item.type === "kids");
             items.push(...filteredItems);
-            setKidsBaskets(shuffle(items));
+            setKidsBaskets(items);
         }
     }, [kidsBaskets.length]);
 
@@ -32,7 +32,7 @@ const Vittles = () => {
             const items = [];
             const filteredItems = MENU.filter((item) => item.type === "nibbles");
             items.push(...filteredItems);
-            setNibbles(shuffle(items));
+            setNibbles(items);
         }
     }, [nibbles.length]);
 
@@ -42,7 +42,7 @@ const Vittles = () => {
                 <h4 style={{ fontSize: 25, marginBottom: 10 }}>{item.name}</h4>
                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <p style={{ fontSize: 20, marginBottom: 35 }}>{item.description}</p>
-                    <p style={{ fontSize: 20 }}>{item.price[0]}</p>
+                    <p style={{ color: "#cf711f", fontSize: 20 }}>{item.price[0]}</p>
                 </div>
             </div>
         );
@@ -53,7 +53,7 @@ const Vittles = () => {
                 <h4 style={{ fontSize: 25, marginBottom: 10 }}>{item.name}</h4>
                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <p style={{ fontSize: 20, marginBottom: 35 }}>{item.description}</p>
-                    <p style={{ fontSize: 20 }}>{item.price[0]}</p>
+                    <p style={{ color: "#cf711f", fontSize: 20 }}>{item.price[0]}</p>
                 </div>
             </div>
         );
@@ -64,7 +64,7 @@ const Vittles = () => {
                 <h4 style={{ fontSize: 25, marginBottom: 10 }}>{item.name}</h4>
                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <p style={{ fontSize: 20, marginBottom: 35 }}>{item.description}</p>
-                    <p style={{ fontSize: 20 }}>{item.price[0]}</p>
+                    <p style={{ color: "#cf711f", fontSize: 20 }}>{item.price[0]}</p>
                 </div>
             </div>
         );
@@ -79,11 +79,11 @@ const Vittles = () => {
             <div style={{ backgroundColor: "#fdf2e9", marginTop: 96, paddingTop: 96, paddingBottom: 96 }}>
 
                 <div style={{ marginLeft: 50, marginRight: 50 }}>
-                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: "#cf711f" }}>NIBBLES</h4>
+                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, }}>NIBBLES</h4>
                     {displayNibbles}
-                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: "#cf711f" }}>KIDS BASKETS</h4>
+                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, }}>KIDS BASKETS</h4>
                     {displayKidsBaskets}
-                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, color: "#cf711f" }}>DESSERTS AND SPECIALS</h4>
+                    <h4 style={{ fontSize: 35, marginBottom: 50, marginTop: 50, }}>DESSERTS AND SPECIALS</h4>
                     {displayDessertsSpecials}
                 </div>
             </div>
