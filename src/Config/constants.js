@@ -3,3 +3,4 @@ export const instagramHandle = "https://www.instagram.com/3leggedcrane/";
 export const twitterHandle = "";
 
 export const siteTitle = "The 3 Legged Crane";
+export const phoneNumber = "(541) 782-2024";
