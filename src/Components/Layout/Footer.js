@@ -33,7 +33,7 @@ const Footer = () => {
           <li className="footer-text">Carry-Out</li>
         </ul>
         <p className="footer-text">PLEASE CALL FOR PICK-UP</p>
-        <p className="footer-text">{phoneNumber}</p>
+        <p className="footer-text"><a style={{color: "white", textDecoration: "none"}} href={`tel:${phoneNumber}`}>{phoneNumber}</a></p>
       </div>
       <div>
         <h3 className="footer-heading-tertiery">Pub Hours</h3>
