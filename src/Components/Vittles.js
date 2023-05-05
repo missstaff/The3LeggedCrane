@@ -16,21 +16,21 @@ const Vittles = () => {
     useEffect(() => {
 
         if (!dessertsSpecials.length) {
-          getMenu(MENU, setDessertsSpecials, "desserts");
+            getMenu(MENU, setDessertsSpecials, "desserts");
         }
     }, [dessertsSpecials.length]);
 
 
     useEffect(() => {
         if (!kidsBaskets.length) {
-           getMenu(MENU, setKidsBaskets, "kids");
+            getMenu(MENU, setKidsBaskets, "kids");
         }
     }, [kidsBaskets.length]);
 
 
     useEffect(() => {
         if (!nibbles.length) {
-           getMenu(MENU, setNibbles, "nibbles");
+            getMenu(MENU, setNibbles, "nibbles");
         }
     }, [nibbles.length]);
 
@@ -42,7 +42,21 @@ const Vittles = () => {
                 <h4 className="vittle-title">{item.name}</h4>
                 <div className="vittles-description-container">
                     <p className="vittles-description">{item.description}</p>
-                    <p className="vittles-price">{item.price[0]}</p>
+                    {item.price.length > 1 ?
+                        (<div style={{ alignItems: "center", display: "flex", flexDirection: "row", justifyContent: "space-between", width: "25%" }}>
+                            <div style={{ alignItems: "center", display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+                                <p className="vittles-price" style={{marginRight: 10}}>{item.size[0]}</p>
+                                <p className="vittles-price">{item.price[0]}</p>
+                            </div>
+
+                            <div style={{ alignItems: "center", display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+                                <p className="vittles-price" style={{marginRight: 10}}>{item.size[1]}</p>
+                                <p className="vittles-price">{item.price[1]}</p>
+                            </div>
+                        </div>)
+                        :
+                        (<p className="vittles-price">{item.price[0]}</p>)
+                    }
                 </div>
             </div>
         );

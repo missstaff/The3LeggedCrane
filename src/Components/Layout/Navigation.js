@@ -28,12 +28,12 @@ const Navigation = () => {
 
         <header className="header">
 
-            <h1 className="site-title">{siteTitle}</h1>
+            <h1 id="home" className="site-title">{siteTitle}</h1>
 
             <nav className="main-nav">
                 <ul className="main-nav-list">
                     <li>
-                        <a href="#" className="main-nav-link">HOME</a>
+                        <a href="#home" className="main-nav-link">HOME</a>
                     </li>
                     <li>
                         <a href="#about" className="main-nav-link">ABOUT</a>

@@ -12,7 +12,6 @@ const Brews = () => {
   const [brews, setBrews] = useState([]);
 
   useEffect(() => {
-    const items = [];
     getFilterdItems(DATA, setBrews, "beverage");
   }, [brews.length]);
 
