@@ -19,25 +19,25 @@ const Navigation = () => {
 
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-    // useEffect(() => {
-    //     const sectionHeroEl = document.querySelector(".slide-container");
-    //     const observer = new IntersectionObserver(function (entries) {
-    //         const ent = entries[0];
-    //         if (!ent.isIntersecting) {
-    //             document.body.classList.add("sticky");
-    //         }
-    //         if (ent.isIntersecting) {
-    //             document.body.classList.remove("sticky");
-    //         }
-    //     }, {
-    //         //in the viewport
-    //         root: null,
-    //         threshold: 0,
-    //     })
-    //     observer.observe(sectionHeroEl)
-    // }, []);
+    useEffect(() => {
+        const sectionHeroEl = document.querySelector(".slide-container");
+        const observer = new IntersectionObserver(function (entries) {
+            const ent = entries[0];
+            if (!ent.isIntersecting) {
+                document.body.classList.add("sticky");
+            }
+            if (ent.isIntersecting) {
+                document.body.classList.remove("sticky");
+            }
+        }, {
+            //in the viewport
+            root: null,
+            threshold: 0,
+        })
+        observer.observe(sectionHeroEl)
+    }, []);
 
-    
+
     const handleMobileNavClick = () => {
         setIsMenuVisible(!isMenuVisible);
     };
