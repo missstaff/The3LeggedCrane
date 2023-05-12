@@ -37,14 +37,6 @@ const Navigation = () => {
         observer.observe(sectionHeroEl)
     }, []);
 
-    useEffect(() => {
-        // Make mobile navigatoion work //
-        const btnNavEl = document.querySelector(".btn-mobile-nav");
-        const headerEl = document.querySelector(".header");
-        btnNavEl.addEventListener("click", function () {
-            headerEl.classList.toggle("nav-open");
-        })
-    }, [isMenuVisible]);
 
     const handleMobileNavClick = () => {
         setIsMenuVisible(!isMenuVisible);
@@ -52,24 +44,24 @@ const Navigation = () => {
 
 
     return (
-        <header className="header">
+        <header className={`header ${isMenuVisible ? "nav-open" : ""}  `} style={{ zIndex: 9999 }}>
             <h1 id="home" className="site-title">{siteTitle}</h1>
             <nav className={`main-nav ${isMenuVisible ? "mobile-nav-visible" : ""}`}>
                 <ul className="main-nav-list">
                     <li>
-                        <a href="#home" className="main-nav-link">HOME</a>
+                        <a onClick={handleMobileNavClick} href="#home" className="main-nav-link">HOME</a>
                     </li>
                     <li>
-                        <a href="#about" className="main-nav-link">ABOUT</a>
+                        <a onClick={handleMobileNavClick} href="#about" className="main-nav-link">ABOUT</a>
                     </li>
                     <li>
-                        <a href="#brews" className="main-nav-link">BREWS</a>
+                        <a onClick={handleMobileNavClick} href="#brews" className="main-nav-link">BREWS</a>
                     </li>
                     <li>
-                        <a href="#vittles" className="main-nav-link">VITTLES</a>
+                        <a onClick={handleMobileNavClick} href="#vittles" className="main-nav-link">VITTLES</a>
                     </li>
                     <li>
-                        <a href="#events" className="main-nav-link">EVENTS</a>
+                        <a onClick={handleMobileNavClick} href="#events" className="main-nav-link">EVENTS</a>
                     </li>
                 </ul>
             </nav>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
@@ -16,6 +16,24 @@ const Footer = () => {
   const isMediumScreen = useMediaQuery("md");
   const isSmallScreen = useMediaQuery("sm");
   const isExtraSmallScreen = useMediaQuery("xs");
+
+  const [iconsSize, setIconsSize] = React.useState(0);
+
+  useEffect(() => {
+   setSizes();
+  }, [closestMedia]);
+
+  const setSizes = () => {
+    if (isLargeScreen) {
+      setIconsSize(75);
+    } else if (isMediumScreen) {
+      setIconsSize(50);
+    } else if (isSmallScreen) {
+      setIconsSize(25);
+    } else if (isExtraSmallScreen) {
+      setIconsSize(25);
+    }
+  };
 
   return (
     <footer className="footer-container">
@@ -43,9 +61,9 @@ const Footer = () => {
               : { display: "flex", flexDirection: "row", justifyContent: "center" }
           }
         >
-          <a href={faceBookHandle} className="social-icons"><FaFacebookSquare size={isSmallScreen || isExtraSmallScreen ? 25 : 50} color="white" /></a>
-          <a href={instagramHandle} className="social-icons"><FaInstagramSquare size={isSmallScreen || isExtraSmallScreen ? 25 : 50} color="white" /></a>
-          <a href={twitterHandle} className="social-icons"><FaTwitterSquare size={isSmallScreen || isExtraSmallScreen ? 25 : 50} color="white" /></a>
+          <a href={faceBookHandle} className="social-icons"><FaFacebookSquare size={iconsSize} color="white" /></a>
+          <a href={instagramHandle} className="social-icons"><FaInstagramSquare size={iconsSize} color="white" /></a>
+          <a href={twitterHandle} className="social-icons"><FaTwitterSquare size={iconsSize} color="white" /></a>
         </div>
       </div>
       <div style={isSmallScreen ? { textAlign: "center" } : {}}>
