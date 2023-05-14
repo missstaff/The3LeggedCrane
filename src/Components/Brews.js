@@ -26,7 +26,7 @@ const Brews = () => {
   return (
     <>
       <div style={{marginBottom: 96}}>
-      <SectionHeader id="brews" heading="Brews" />
+      <SectionHeader id="brews" heading="FEATURED BREWS" />
       </div>
       <div className="brews-card">
         {brewItems}

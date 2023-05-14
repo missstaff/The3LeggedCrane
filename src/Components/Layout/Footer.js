@@ -3,7 +3,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { useClosestMedia } from "../../hooks/useClosestMedia";
-import { useMediaQuery } from "../../hooks/useMediaQuery ";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { address, faceBookHandle, instagramHandle, phoneNumber, twitterHandle } from "../../Config/constants";
 import "../../CSS/Footer.css";
 

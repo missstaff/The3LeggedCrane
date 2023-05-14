@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import SectionHeader from "./Layout/SectionHeader";
+import ShowIf from "./ShowIf";
 import { shuffle } from "../Utility/Utility";
 import "../CSS/Gallery.css";
 
@@ -24,18 +26,26 @@ const Gallery = () => {
   const galleryImage = galleryItems.slice(0, 16).map((item, index) => {
     return (
       <figure key={index} className="gallery-item">
-      <img src={item.img} alt={item.description} />
-    </figure>
+        <img src={item.img} alt={item.description} />
+      </figure>
     );
   });
 
 
   return (
-    <div>
-      <div className="gallery">
-        {galleryImage}
+    <>
+      <ShowIf condition={true} render={() => {
+        return (
+          <div style={{ marginBottom: 96 }}>
+            <SectionHeader id="brews" heading="Gallery" />
+          </div>)
+      }} />
+      <div>
+        <div className="gallery">
+          {galleryImage}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

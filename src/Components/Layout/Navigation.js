@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaGripLines } from "react-icons/fa";
 import { useClosestMedia } from "../../hooks/useClosestMedia";
-import { useMediaQuery } from "../../hooks/useMediaQuery ";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { siteTitle } from "../../Config/constants";
 import "../../CSS/Navigation.css";
 
@@ -65,8 +65,10 @@ const Navigation = () => {
                     </li>
                 </ul>
             </nav>
+            
             <button className="btn-mobile-nav" onClick={handleMobileNavClick}>
                 <a className="icon-mobile-nav" name="menu-outline"><FaGripLines size={isSmallScreen || isExtraSmallScreen ? 25 : 50} color="orange" /></a>
+                <a className="icon-mobile-nav" name="close-outline"><FaGripLines size={isSmallScreen || isExtraSmallScreen ? 25 : 50} color="orange" /></a>
             </button>
         </header>
     );

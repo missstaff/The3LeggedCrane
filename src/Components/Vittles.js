@@ -16,7 +16,7 @@ const Vittles = () => {
     useEffect(() => {
 
         if (!dessertsSpecials.length) {
-            getMenu(MENU, setDessertsSpecials, "desserts");
+            getMenu(MENU, setDessertsSpecials, "desserts/specials");
         }
     }, [dessertsSpecials.length]);
 

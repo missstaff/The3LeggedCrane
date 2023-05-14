@@ -7,8 +7,10 @@ import Gallery from "./Components/Gallery";
 import ImageCarousel from "./Components/UI/ImageCarousel";
 import Navigation from "./Components/Layout/Navigation";
 import SectionHeader from "./Components/Layout/SectionHeader";
+import ShowIf from "./Components/ShowIf";
 import Vittles from "./Components/Vittles";
 import "./CSS/About.css";
+
 
 
 function App() {
@@ -18,10 +20,11 @@ function App() {
       <div>
         <ImageCarousel />
       </div>
-      <div className="section-about-heading">
+      <ShowIf condition={false} render={() => <div className="section-about-heading">
         <SectionHeader id="about" heading="ABOUT" />
         <SectionHeader id="gallery" heading="GALLERY" />
-      </div>
+      </div>} />
+
       <div className="section-about">
         <div className="about-background-image">
           <About />

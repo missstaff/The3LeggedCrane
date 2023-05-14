@@ -35,3 +35,28 @@
     margin-bottom: 5rem;
     text-align: left;
 }
+
+@media (max-width: 900px) {
+    .section-about {
+        align-items: center;
+        background-color: #fdf2e9;
+        display: grid;
+        grid-template-columns: 1fr;
+        /* change to a single column */
+        grid-template-rows: repeat(2, auto);
+        /* two rows of equal height */
+        margin-bottom: 9.6rem;
+        padding-bottom: 9.6rem;
+        padding-top: 9.6rem;
+    }
+
+    .about-background-image {
+        background-image: url("../assets/3LeggedCrane_LOGO_LightGrayShield_lightGreen.png");
+        order: 2;
+        background-position: center center;
+        background-repeat: no-repeat, repeat;
+        opacity: .90;
+        background-size: contain;
+        /* or cover */
+    }
+}
