@@ -262,14 +262,14 @@ export const MENU = [
         id: 2,
         name: "Pub Fries",
         description: "Hand cut fries, seasoned with our house blend of spices",
-        size: ["half order", "full order"],
+        size: ["small", "large"],
         price: [5, 10],
         type: "nibbles"
     },
     {   id: 3,                  
         name: "Sweet Potato Fries",
         description: "Hand cut sweet potatoe fries, seasoned with our house blend of spices",
-        size: ["half order", "full order"],
+        size: ["small", "large"],
         price: [7, 12],
         type: "nibbles"
     },

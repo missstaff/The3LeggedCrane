@@ -1,6 +1,5 @@
 .vittles-container {
     background-color: #fdf2e9;
-    margin-top: 9.6rem;
     padding-top: 9.6rem;
     padding-bottom: 9.6rem;
 }
@@ -8,7 +7,6 @@
 .vittles-container {
     font-size: 3.5rem;
     margin-bottom: 5rem;
-    margin-top: 5rem;
 }
 
 .vittles-description {
@@ -21,6 +19,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }
 
 .vittles-header{

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SectionHeader from "./Layout/SectionHeader";
-import { getMenu } from "../Utility/Utility"
+import { getMenu } from "../Utility/Utility";
+import { useClosestMedia } from "../hooks/useClosestMedia";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import "../CSS/Vittles.css"
 
 import { MENU } from "../data";
@@ -8,9 +10,33 @@ import { MENU } from "../data";
 
 const Vittles = () => {
 
+    const closestMedia = useClosestMedia({
+        queries: ["xs", "sm", "md", "lg", "xl", "2xl"],
+    });
+
+    const isLargeScreen = useMediaQuery("lg");
+    const isMediumScreen = useMediaQuery("md");
+    const isSmallScreen = useMediaQuery("sm");
+    const isExtraSmallScreen = useMediaQuery("xs");
+
     const [dessertsSpecials, setDessertsSpecials] = useState([]);
     const [kidsBaskets, setKidsBaskets] = useState([]);
     const [nibbles, setNibbles] = useState([]);
+
+
+    const [fontSize, setFontSize] = useState("16px");
+
+    useEffect(() => {
+        if (isLargeScreen) {
+            setFontSize("24px");
+        } else if (isMediumScreen) {
+            setFontSize("20px");
+        } else if (isSmallScreen) {
+            setFontSize("18px");
+        } else if (isExtraSmallScreen) {
+            setFontSize("16px");
+        }
+    }, [isLargeScreen, isMediumScreen, isSmallScreen, isExtraSmallScreen]);
 
 
     useEffect(() => {
@@ -38,24 +64,28 @@ const Vittles = () => {
 
     const displayNibbles = nibbles.map((item, index) => {
         return (
-            <div style={{ marginLeft: 50 }} key={index}>
+            <div style={{ marginLeft: "10%" }} key={index}>
                 <h4 className="vittle-title">{item.name}</h4>
-                <div className="vittles-description-container">
-                    <p className="vittles-description">{item.description}</p>
+                <div className="vittles-description-container ">
+                    <p className="vittles-description" style={{fontSize: fontSize,  padding: 5 }}>{item.description}</p>
                     {item.price.length > 1 ?
-                        (<div style={{ alignItems: "center", display: "flex", flexDirection: "row", justifyContent: "space-between", width: "25%" }}>
-                            <div style={{ alignItems: "center", display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-                                <p className="vittles-price" style={{marginRight: 10}}>{item.size[0]}</p>
-                                <p className="vittles-price">{item.price[0]}</p>
-                            </div>
+                        (<div>
 
-                            <div style={{ alignItems: "center", display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-                                <p className="vittles-price" style={{marginRight: 10}}>{item.size[1]}</p>
-                                <p className="vittles-price">{item.price[1]}</p>
+                            <div style={{ flexDirection: "column", alignItems: "flex-end" }}>
+                                <div style={{ alignItems: "flex-end", display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>
+                                    <p className="vittles-price" style={{ fontSize: fontSize, padding: 5 }}>{item.size[0]}</p>
+                                    <p className="vittles-price" style={{ fontSize: fontSize, padding: 5 }}>{item.price[0].toFixed(2)}</p>
+                                </div>
+
+                                <div style={{ alignItems: "flex-end", display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>
+                                    <p className="vittles-price" style={{ fontSize: fontSize, padding: 5 }}>{item.size[1]}</p>
+                                    <p className="vittles-price" style={{ fontSize: fontSize, padding: 5 }}>{item.price[1].toFixed(2)}</p>
+                                </div>
+
                             </div>
                         </div>)
                         :
-                        (<p className="vittles-price">{item.price[0]}</p>)
+                        (<div style={{alignItems: "flex-end", display: "flex", flexDirection: "row", justifyContent: "flex-end"}}><p className="vittles-price" style={{ fontSize: fontSize, padding: 5 }}>{item.price[0].toFixed(2)}</p></div>)
                     }
                 </div>
             </div>
@@ -65,11 +95,11 @@ const Vittles = () => {
 
     const displayKidsBaskets = kidsBaskets.map((item, index) => {
         return (
-            <div style={{ marginLeft: 50 }} key={index}>
+            <div style={{ marginLeft: "10%" }}  key={index}>
                 <h4 className="vittle-title">{item.name}</h4>
                 <div className="vittles-description-container">
-                    <p className="vittles-description">{item.description}</p>
-                    <p className="vittles-price">{item.price[0]}</p>
+                    <p className="vittles-description"  style={{ fontSize: fontSize, padding: 5}}>{item.description}</p>
+                    <div style={{alignItems: "flex-end", display: "flex", flexDirection: "row", justifyContent: "flex-end"}}><p className="vittles-price"  style={{ fontSize: fontSize, padding: 5  }}>{item.price[0].toFixed(2)}</p></div>
                 </div>
             </div>
         );
@@ -78,11 +108,13 @@ const Vittles = () => {
 
     const displayDessertsSpecials = dessertsSpecials.map((item, index) => {
         return (
-            <div style={{ marginLeft: 50 }} key={index}>
+            <div style={{ marginLeft: "10%" }} key={index}>
                 <h4 className="vittle-title">{item.name}</h4>
                 <div className="vittles-description-container">
-                    <p className="vittles-description">{item.description}</p>
-                    <p className="vittles-price">{item.price[0]}</p>
+                    <p className="vittles-description" style={{ fontSize: fontSize, padding: 5  }}>{item.description}</p>
+                    <div style={{alignItems: "flex-end", display: "flex", flexDirection: "row", justifyContent: "flex-end"}}>
+                    <p className="vittles-price" style={{ fontSize: fontSize, padding: 5  }}>{item.price[0]}</p>
+                    </div>
                 </div>
             </div>
         );
