@@ -6,9 +6,21 @@
 }
 
 .brews-card {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    grid-gap: 1.6rem;
+    justify-content: center;
+    align-items: stretch;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .brews-card {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+  }
+  
 

@@ -1,18 +1,12 @@
 import React from "react";
-import SectionHeader from "../Components/Layout/SectionHeader";
 import "../CSS/About.css"
-import ShowIf from "./ShowIf";
+
 
 
 const About = () => {
     return (
         <>
-            <ShowIf condition={true} render={() => {
-                return (
-                    <div style={{ marginBottom: 96, marginTop: 96 }}>
-                        <SectionHeader id="brews" heading="About" />
-                    </div>)
-            }} />
+         
             <div className="about-text-container">
                 <p className="about-text">
                     At our English-style pub and cask ale brew house, we're proud to offer a wide selection of handcrafted beers brewed on-site using only the finest malt and hops. Our traditional brewing process includes open fermentation, top cropping, and natural carbonation, resulting in some of the best-tasting ales and lagers you'll ever try.</p>

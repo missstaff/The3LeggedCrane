@@ -34,7 +34,7 @@ const Gallery = () => {
 
   return (
     <>
-      <ShowIf condition={true} render={() => {
+      <ShowIf condition={false} render={() => {
         return (
           <div style={{ marginBottom: 96 }}>
             <SectionHeader id="brews" heading="Gallery" />

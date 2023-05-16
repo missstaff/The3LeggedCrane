@@ -5,14 +5,16 @@
     grid-template-columns: 55fr 45fr;
     margin-bottom: 9.6rem;
     padding-bottom: 9.6rem;
-    padding-top: 9.6rem;
+    /* padding-top: 9.6rem; */
 }
 
 .about-background-image {
     background-image: url("../assets/3LeggedCrane_LOGO_LightGrayShield_lightGreen.png");
+    background-size: contain; /* or background-size: cover; */
     background-position-x: center;
-    background-position-y: top;
-    background-repeat: no-repeat, repeat;
+    background-position-y: center;
+    background-size: 65%; 
+    background-repeat: no-repeat;
     opacity: .90;
 }
 
@@ -21,6 +23,7 @@
     display: grid;
     grid-template-columns: 55fr 45fr;
     padding-top: 9.6rem;
+    padding-bottom: 9.6rem;
 
 }
 
@@ -47,7 +50,7 @@
         /* two rows of equal height */
         margin-bottom: 9.6rem;
         padding-bottom: 9.6rem;
-        padding-top: 9.6rem;
+        /* padding-top: 9.6rem; */
     }
 
     .about-background-image {
